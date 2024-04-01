@@ -15,7 +15,7 @@ function convertSecondsToMinutesAndSeconds(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder
-    let a = await fetch(`/Songs/${currFolder}/`)
+    let a = await fetch(`/songs/${currFolder}/`)
     let response = await a.text()
     let div = document.createElement("div")
     div.innerHTML = response
@@ -46,7 +46,7 @@ async function getSongs(folder) {
 }
 
 const playMusic = (track, paused = false) => {
-    currentSong.src = `/Songs/${currFolder}` + track
+    currentSong.src = `/songs/${currFolder}` + track
     if (!paused) {
         currentSong.play()
         play_pause.src = "images/svgs/pause.svg"
