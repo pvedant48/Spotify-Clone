@@ -15,7 +15,7 @@ function convertSecondsToMinutesAndSeconds(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder
-    let a = await fetch(`/songs/${currFolder}/`)
+    let a = await fetch(`https://roaring-valkyrie-5c2b4a.netlify.app/songs/${currFolder}/`)
     let response = await a.text()
     let div = document.createElement("div")
     div.innerHTML = response
@@ -46,7 +46,7 @@ async function getSongs(folder) {
 }
 
 const playMusic = (track, paused = false) => {
-    currentSong.src = `/songs/${currFolder}` + track
+    currentSong.src = `https://roaring-valkyrie-5c2b4a.netlify.app/songs/${currFolder}` + track
     if (!paused) {
         currentSong.play()
         play_pause.src = "images/svgs/pause.svg"
