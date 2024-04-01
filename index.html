@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="icon" type="" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+</head>
+
+<body>
+
+    <div class="container flex bg-black">
+
+        <div class="left">
+            <div class="home bg-gray rounded p-1">
+                <img class="cross invert absolute" width="18" src="images/svgs/cross.svg" alt="">
+                <div class="logo"><img class="invert" src="images/svgs/logo.svg" alt="Logo" srcset="">
+                </div>
+                <ul>
+                    <li><img class="invert" src="images/svgs/home.svg" alt="Home" srcset="">Home</li>
+                    <li><img class="invert" src="images/svgs/search.svg" alt="Search" srcset="">Search
+                    </li>
+                </ul>
+            </div>
+
+            <div class="library flex bg-gray rounded p-2">
+                <div class="head flex">
+
+                    <div class="flex item-center justify-center"><img class="invert" width="24px"
+                            src="images/svgs/library.svg" alt="library" srcset=""><span>Your
+                            Library </span></div>
+                    <div class="flex item-center justify-center"><img class="invert" width="16px"
+                            src="images/svgs/plus.svg" alt="create new library"></div>
+                </div>
+                <div class="playlists">
+                    <ul>
+
+                    </ul>
+                </div>
+                <div class="footer flex">
+                    <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="right relative">
+            <div class="header">
+                <div class="nav flex item-center">
+                    <div class="flex item-center">
+                        <img class="hamburger" style="width: 40px;" src="images/svgs/hamburger.svg"
+                            alt="hamburger">
+                        <button><img src="images/svgs/left_arrow.svg" alt="left"></button>
+                        <button><img src="images/svgs/right_arrow.svg" alt="right"></button>
+                    </div>
+                    <div class="buttons">
+                        <button class="sign">Sign up</button>
+                        <button class="log">Log in</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spotify-playlists">
+                <h1>Spotify Playlists</h1>
+                <div class="card-container flex">
+                    <div data-folder="1" class="card">
+                        <div class="relative">
+                            <div class="play flex justify-center item-center">
+                                <img src="images/svgs/play.svg" alt="">
+                            </div>
+                            <img src="images/covers/happy hits.jpeg" alt="">
+                        </div>
+                        <h2>Happy Hits!</h2>
+                        <p>Hits to boost your mood and fill you with happiness!</p>
+                    </div>
+
+                    <div data-folder="2" class="card">
+                        <div class="relative">
+
+                            <div class="play flex justify-center item-center">
+                                <img src="images/svgs/play.svg" alt="">
+                            </div>
+                            <img src="images/covers/calming acoustic.jpeg" alt="">
+                        </div>
+                        <h2>Today’s Top Hits</h2>
+                        <p>Olivia Rodrigo is on top of the Hottest 50!</p>
+                    </div>
+
+                    <div data-folder="3" class="card">
+                        <div class="relative">
+
+                            <div class="play flex justify-center item-center">
+                                <img src="images/svgs/play.svg" alt="">
+                            </div>
+                            <img src="images/covers/soft house.jpeg" alt="">
+                        </div>
+                        <h2>Chillout Lounge</h2>
+                        <p>Just lean back and enjoy relaxed beats.</p>
+                    </div>
+
+                    <div data-folder="4" class="card">
+                        <div class="relative">
+
+                            <div class="play flex justify-center item-center">
+                                <img src="images/svgs/play.svg" alt="">
+                            </div>
+                            <img src="images/covers/stress relief.jpeg" alt="">
+                        </div>
+                        <h2>All Out 2020s</h2>
+                        <p>The biggest songs of the 2020s.</p>
+                    </div>
+
+                    <div data-folder="5" class="card">
+                        <div class="relative">
+
+                            <div class="play flex justify-center item-center">
+                                <img src="images/svgs/play.svg" alt="">
+                            </div>
+                            <img src="images/covers/indie rock hits.jpeg" alt="">
+                        </div>
+                        <h2>Jazz in the Background</h2>
+                        <p>Soft instrumental Jazz for all your activities.</p>
+                    </div>
+
+                    <div data-folder="6" class="card">
+                        <div class="relative">
+
+                            <div class="play flex justify-center item-center">
+                                <img src="images/svgs/play.svg" alt="">
+                            </div>
+                            <img src="images/covers/lofi chill.jpeg" alt="">
+                        </div>
+                        <h2>Chill Hits</h2>
+                        <p>Kick back to the best new and recent chill hits.</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="playbar flex justify-center ">
+                <div class="above flex">
+
+                    <div class="songinfo">
+
+                    </div>
+                    <div class="songbuttons flex justify-center">
+                        <img id="previous" width=32px src="images/svgs/prevsong.svg" alt="">
+                        <img id="play_pause" width=32px src="images/svgs/playbutton.svg" alt="">
+                        <img id="next" width=32px src="images/svgs/nextsong.svg" alt="">
+                    </div>
+                    <div class="timevol flex item-center">
+
+                        <div class="songtime">
+
+                        </div>
+                        <div class="volume flex item-center">
+                            <img width="18" src="images/svgs/volume.svg" alt="volume">
+                            <input class="range" type="range" value="35">
+                        </div>
+                    </div>
+                </div>
+                <div class="seekbar relative">
+                    <div class="circle absolute "></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
